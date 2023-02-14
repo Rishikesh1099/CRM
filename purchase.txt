@@ -1,1 +1,6 @@
 this is my purchase files
+public void waitUntilElementIsVisible(String xpathValue, int timeInSecond) {
+		By byObj = By.xpath(xpathValue);
+		WebDriverWait expcitlyWait = new WebDriverWait(driver, Duration.ofSeconds(timeInSecond));
+		expcitlyWait.until(ExpectedConditions.visibilityOfElementLocated(byObj));
+	}
